@@ -68,7 +68,7 @@ export const InputTags = ({
     const isEndOfText = event.currentTarget.selectionEnd === currentValue.length
     const isPossibleRight =
       (isEndOfText || currentValue.length === 0) && terms.length > 0
-    if ((key === 'Enter' || key === ' ') && currentValue != '') {
+    if ((key === 'Enter' || key === ' ' || key === ',') && currentValue != '') {
       event.preventDefault()
       setTerms([...terms, currentValue])
       setValue('')
